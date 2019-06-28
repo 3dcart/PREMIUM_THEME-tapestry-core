@@ -1,0 +1,337 @@
+<section id="home" class="home-page-content page-content">
+
+    <!--START: home_carousel-->
+    <section class="homepage-slider">
+        
+        <div class="homeCarousel flexslider" data-animation="[hc_effect]" data-slideshowspeed="[hc_delay]">
+            <script>
+                    //Slide JSON format
+                    /*
+                    {
+						"background_color": "#eceded", 
+						"background_image": "/assets/templates/Tapestry-core-Premium/images/content/main-slider-transparent.png", 
+						"button_link": "https://www.3dcart.com/", 
+						"button_text": "Shop Now", 
+						"heading": "<span>Packaging and Shipping Supplies</span> We carry over 10,000 items in stock at wholesale prices, so whether you are looking for shipping boxes, candy boxes, or bin boxes. We’ve got it all.", "text_color": "#000000" 
+					}
+                    */
+
+                    var slides = '[';
+                    //<!--START: carousel-->
+                    slides += '[image],'
+                    //<!--END: carousel-->
+
+                    //remove last comma (,)
+                    slides = slides.substring(0, slides.length - 1);
+
+                    slides = slides + ']'; 
+            </script>
+
+            <div id="hp-slide-format" class="hidden">
+                
+				<div class="hp-slide-content">
+					<div class="container">
+						<div class="hp-slider-text">
+							<h3></h3>
+							<p></p>
+							<!-- <div class="hp-slider-cta">
+								<a href="" class="btn btn-primary"></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+                
+            </div>
+
+            <ul id="hp-slides" class="slides"></ul>
+        </div>
+    </section>
+    <!--END: home_carousel-->
+
+    <section class="home-category-header">
+		<h2 class="header-specials">New Arrivals</h2>
+        <div class="container">
+<div class="homepage-category-top">
+	<div class="homepage-category homepage-category-left revealOnScroll" data-animation="fadeInLeft" data-timeout="500">
+		<a href="https://www.3dcart.com/">
+			<div class="hpc-img-wrapper">
+				<img src="/assets/templates/[template]/images/content/all-you-need.jpg" alt="all-you-need" class="img-responsive" />
+			</div>
+		</a>
+
+		<a href="https://www.3dcart.com/">
+			<div class="hpc-img-wrapper">
+				<img src="/assets/templates/[template]/images/content/all-you-need-1.jpg" alt="all-you-need" class="img-responsive" />
+			</div>
+		</a>
+
+		<a href="https://www.3dcart.com/">
+			<div class="hpc-img-wrapper">
+				<img src="/assets/templates/[template]/images/content/all-you-need-2.jpg" alt="all-you-need" class="img-responsive" />
+			</div>
+		</a>
+	</div>
+	<div class="homepage-category homepage-category-right revealOnScroll" data-animation="fadeInRight" data-timeout="500">
+		<a href="https://www.3dcart.com/">
+			<div class="hpc-img-wrapper">
+				<img src="/assets/templates/[template]/images/content/large-selection-1.jpg" alt="large-selection" class="img-responsive" />
+			</div>
+		</a>
+
+		<a href="https://www.3dcart.com/">
+			<div class="hpc-img-wrapper">
+				<img src="/assets/templates/[template]/images/content/large-selection-2.jpg" alt="large-selection" class="img-responsive" />
+			</div>
+		</a>
+
+		<a href="https://www.3dcart.com/">
+			<div class="hpc-img-wrapper">
+				<img src="/assets/templates/[template]/images/content/large-selection.jpg" alt="large-selection" class="img-responsive" />
+			</div>
+		</a>
+	</div>
+</div>
+        </div>
+    </section>
+
+    <!--START: CATEGORY_HEADER-->
+    <section class="category-header">
+        [CONTENT]
+    </section>
+    <!--END: CATEGORY_HEADER-->
+
+	<!--START: FEATURE_MENU-->
+    <section class="products-section">
+		<h2 class="header-specials">[category_Header-specials]</h2>
+        <div class="container">
+            <!--START: CATEGORY_ITEMS-->
+            <div class="product-items product-items-[product-cols-number]">
+                <!--START: ITEM_TEMPLATE_0-->
+                [product_items]
+                <!--END: ITEM_TEMPLATE_0-->
+            </div>
+            <!--END: CATEGORY_ITEMS-->
+            
+        </div>
+    </section>
+	<!--END: FEATURE_MENU-->
+	
+	<!--START: TOP_SELLERS_BLOCK-->
+	<section class="products-section products-section-bhistory"> 
+		<h2 class="header-specials">Best Sellers</h2>
+		<div class="container">
+			<div class="product-carousel flexslider">
+				<ul class="product-items product-items-[product-cols-number] slides">
+				<!--START: topsellers-->
+					<!--START: topsellers_topitem-->
+					<li class="product-item" data-catalogid="[catalogid]" data-ajaxcart="1" data-addcart-callback="addcart_callback">
+						<div class="img">
+							<a href="product.asp?itemid=[catalogid]">
+								<img src="[THUMBNAIL]" alt="[name]" class="img-responsive" />
+							</a>
+							<!--START: quickview-->
+							<button class="quickview" data-toggle="modal">Quick View</button>
+							<!--<button class="quickview" data-toggle="modal">Quick View</button>-->
+							<!--END: quickview-->
+						</div>
+						<div class="name">
+							<a href="product.asp?itemid=[catalogid]">[name]</a>
+						</div>
+
+						<div class="price">
+							<!--START: ITEMPRICE-->
+							<span class="regular-price">[ITEMPRICE]</span>
+							<!--END: ITEMPRICE-->
+							<!--START: SALEPRICE-->
+							<del class="regular-price">[ITEMPRICE]</del>
+							<span class="sale-price">[ITEMSALEPRICE]</span>
+							<span class="on-sale-badge">[product_sale]</span>
+							<!--END: SALEPRICE-->
+						</div>
+
+						<div class="reviews">
+							<!--START: product_review-->
+							<!--START: product_review_average-->
+							<span class="reviews-stars rating-[review_average]"></span> <span class="reviews-count">([review_count])</span>
+							<!--END: product_review_average-->
+							<!--END: product_review-->
+						</div>
+
+						<!--START: addtocart-->
+						<div class="action">
+							<a href="add_cart.asp?quick=1&amp;item_id=[catalogid]" class="add-to-cart btn btn-default">
+								<span class="buyitlink-text">[category_buyitlink]</span>
+								<span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+								<span class="ajaxcart-added icon-ok"></span>
+							</a>
+						</div>
+						<!--END: addtocart-->
+					</li>
+					<!--END: topsellers_topitem-->
+					<!--START: topsellers_item-->
+					<li class="product-item" data-catalogid="[catalogid]" data-ajaxcart="1" data-addcart-callback="addcart_callback">
+						<div class="img">
+							<a href="product.asp?itemid=[catalogid]">
+								<img src="[THUMBNAIL]" alt="[name]" class="img-responsive" />
+							</a>
+							<!--START: quickview-->
+							<button class="quickview" data-toggle="modal">Quick View</button>
+							<!--<button class="quickview" data-toggle="modal">Quick View</button>-->
+							<!--END: quickview-->
+						</div>
+						<div class="name">
+							<a href="product.asp?itemid=[catalogid]">[name]</a>
+						</div>
+
+						<div class="price">
+							<!--START: ITEMPRICE-->
+							<span class="regular-price">[ITEMPRICE]</span>
+							<!--END: ITEMPRICE-->
+							<!--START: SALEPRICE-->
+							<del class="regular-price">[ITEMPRICE]</del>
+							<span class="sale-price">[ITEMSALEPRICE]</span>
+							<span class="on-sale-badge">[product_sale]</span>
+							<!--END: SALEPRICE-->
+						</div>
+
+						<!--START: addtocart-->
+						<div class="action">
+							<a href="add_cart.asp?quick=1&amp;item_id=[catalogid]" class="add-to-cart btn btn-default">
+								<span class="buyitlink-text">[category_buyitlink]</span>
+								<span class="ajaxcart-loader icon-spin2 animate-spin"></span>
+								<span class="ajaxcart-added icon-ok"></span>
+							</a>
+						</div>
+						<!--END: addtocart-->
+					</li>
+					<!--END: topsellers_item-->
+				<!--END: topsellers-->
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!--END: TOP_SELLERS_BLOCK-->
+	
+	<section class="bottom-banner-section">
+		<div class="container">
+			<div class="bottom-banners">
+				<div class="bottom-banner-top">
+					<div class="text revealOnScroll" data-animation="fadeInLeft" data-timeout="500">
+						<!-- <img src="/assets/templates/[template]/images/content/bottom-baner.jpg" alt="Lenses" class="img-responsive" /> -->
+						<h2 class="header-specials">Get<br>Boxed Up</h2>
+						<p>Wholesale discounts every day of the week.<br>Save 20-50% when you buy in bulk.</p>
+					</div>
+					
+					<a href="https://www.3dcart.com/" class="revealOnScroll" data-animation="fadeInRight" data-timeout="500">
+						<img src="/assets/templates/[template]/images/content/bottom-baner.jpg" alt="Get Boxed Up" class="img-responsive" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+    <!--START: CATEGORY_FOOTER-->
+    <section class="category-footer">
+        [CONTENT]
+    </section>
+    <!--END: CATEGORY_FOOTER-->
+
+</section>
+
+<!--START: template_scripts-->
+<script type="text/javascript" src="/assets/templates/common-core/lib/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    jQuery(function () {
+
+        var slidesJson = jQuery.parseJSON(slides);
+        jQuery(slidesJson).each(function (i, element) {
+            var slideItem = jQuery("<li></li>");
+            var slideFormat = jQuery('#hp-slide-format > div').clone();
+
+            jQuery(slideItem).css('background-image', 'url('+element.background_image+')');
+
+            jQuery(slideFormat).find('.hp-slider-text h3').html(element.heading);
+            jQuery(slideFormat).find('.hp-slider-cta a').attr('href', element.button_link);
+            jQuery(slideFormat).find('.hp-slider-cta a').html(element.button_text);
+    
+            jQuery(slideItem).append(slideFormat);
+
+            jQuery('#hp-slides').append(slideItem);
+        });
+
+        jQuery('.homeCarousel').flexslider({
+            animation: jQuery('.homeCarousel').attr('data-animation'),
+			slideshow: true,
+            slideshowSpeed: jQuery('.homeCarousel').attr('data-slideshowspeed'),
+            controlNav: false,
+            keyboard: false
+        });
+
+        var $window = jQuery(window),
+		flexslider = { vars: {} };
+
+        // tiny helper function to add breakpoints
+        function getGridSize() {
+            return (window.innerWidth <= 567) ? 1 :
+                   (window.innerWidth < 992) ? 2 : 4;
+        }
+
+        $window.on("load", function () {
+            jQuery('.hp-brands-flexslider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                keyboard: false,
+                itemWidth: 210,
+                itemMargin: 0,
+                minItems: getGridSize(), // use function to pull in initial value
+                maxItems: getGridSize() // use function to pull in initial value
+            });
+
+            setTimeout(function () {
+                window.dispatchEvent(new Event('resize'));
+            }, 100);
+        });
+    });
+	
+	(function () {
+		// store the slider in a local variable
+		var $window = $(window),
+			flexslider = { vars: {} };
+
+		// tiny helper function to add breakpoints
+		function getGridSize() {
+			return (window.innerWidth <= 567) ? 1 :
+				   (window.innerWidth < 992) ? 2 : 4;
+		}
+
+		$window.on("load", function () {
+			$('.product-carousel').flexslider({
+				animation: "slide",
+				controlNav: false,
+				keyboard: false,
+				itemWidth: 210,
+				itemMargin: 0,
+				minItems: getGridSize(), // use function to pull in initial value
+				maxItems: getGridSize() // use function to pull in initial value
+			});
+
+			setTimeout(function () {
+				window.dispatchEvent(new Event('resize'));
+			}, 100);
+		});
+
+		// check grid size on resize event
+		$window.resize(function () {
+			var gridSize = getGridSize();
+
+			flexslider.vars.minItems = gridSize;
+			flexslider.vars.maxItems = gridSize;
+		});
+	}());
+</script>
+<!--END: template_scripts-->
+
+<!--START: template_styles-->
+<link rel="stylesheet" href="/assets/templates/common-core/lib/flexslider/flexslider.css" type="text/css" media="screen" />
+<!--END: template_styles-->
