@@ -30,7 +30,7 @@ body {
 footer {
   flex-shrink: 0;
 }
-
+.searchIcon{display: none !important}
 .mailinglist-input.form-control:focus,
 .form-control.search-text:focus{
 outline: 0;

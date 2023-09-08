@@ -56,10 +56,10 @@
                         <!--START: shopping_cart-->
                         <li><a href="/view_cart.asp" aria-label="view cart"><i role="presentation" class="icon-basket cart-icon"></i></a></li>
                         <!--END: shopping_cart-->
-                        <li><a href="javascript:;" data-toggle="modal" data-target="#exampleModalCenter" role="button" aria-label="search"><i role="presentation" class="icon-search"></i></a></li>
+                        <li class="searchIcon"><a href="javascript:;" data-toggle="modal" data-target="#exampleModalCenter" role="button" aria-label="search"><i role="presentation" class="icon-search"></i></a></li>
                     </ul>
                 </nav>
-
+                <!--START: FRAME_SEARCH-->
                 <div class="search-modal modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -69,7 +69,6 @@
                         </button>
                         </div>
                         <div id="modal-search" class="modal-body">
-                            <!--START: FRAME_SEARCH-->
                             <div id="searchBox" class="searchBox">
                                 <form method="get" name="searchForm" action="search.asp" role="search">
                                     <div class="search-form">
@@ -78,11 +77,12 @@
                                     </div>
                                 </form>
                             </div>
-                            <!--END: FRAME_SEARCH-->
                         </div>
                     </div>
                     </div>
                 </div>
+                <style>.searchIcon{display: inline-block !important}</style>
+                <!--END: FRAME_SEARCH-->
 
             </div>
         </div>
